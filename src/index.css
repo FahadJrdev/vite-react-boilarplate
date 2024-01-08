@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .myContainer {
+    @apply container mx-auto w-[90%] max-w-[1200px];
+  }
+
+  .btn {
+    @apply rounded bg-brand px-4 py-2 font-bold text-white;
+  }
+
+  svg, a, button {
+    @apply cursor-pointer;
+  }
+}
+
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+select,
+input[type='checkbox'],
+input[type='radio'],
+svg {
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* WebKit (Safari/Chrome) */
+/* Vertical scrollbar */
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Horizontal scrollbar */
+.horizontal-scrollbar::-webkit-scrollbar {
+  height: 0px;
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Firefox */
+/* Vertical scrollbar */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f0f0f0;
+}
+
+/* Horizontal scrollbar */
+.horizontal-scrollbar {
+  scrollbar-width: none;
+  scrollbar-color: #888 #f0f0f0;
+}
+
+/* Microsoft Edge */
+/* Vertical scrollbar */
+@supports (-ms-ime-align: auto) {
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+  }
+}
+
+/* Horizontal scrollbar */
+@supports (-ms-ime-align: auto) {
+  .horizontal-scrollbar {
+    scrollbar-width: none;
+    scrollbar-color: #888 #f0f0f0;
+  }
+}
